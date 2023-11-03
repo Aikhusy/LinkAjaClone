@@ -15,7 +15,7 @@ class FrontPage extends StatelessWidget {
                 child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  margin: EdgeInsets.fromLTRB(30, 10, 20, 10),
                   child: Row(
                     children: [
                       ClipRRect(
@@ -34,12 +34,14 @@ class FrontPage extends StatelessWidget {
                           alignment: Alignment
                               .centerRight, // Mengatur widget rata ke kanan
                           child: Container(
+                            width: 60, // Set the width of the image
+                            height: 60,
                             margin: EdgeInsets.fromLTRB(1100, 10, 20, 10),
                             color: Color.fromARGB(255, 255, 255, 255),
                             child: Image.network(
                               'https://cdn-icons-png.flaticon.com/512/4649/4649082.png',
-                              width: 60, // Set the width of the image
-                              height: 60,
+                              width: 30, // Set the width of the image
+                              height: 30,
                             ),
                           ),
                         ),
@@ -62,29 +64,172 @@ class FrontPage extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  alignment: Alignment.topLeft,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
-                    color: Color.fromARGB(255, 255, 52, 52),
+                    color: Color.fromARGB(255, 251, 51, 51),
                   ),
                   constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width,
                   ),
                   width: 1300,
-                  height: 150,
+                  height: 220,
                   child: Column(
                     children: [
-                      Container(
-                        width: 200,
-                        height: 100,
-                        color: Colors.blue,
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Hello, world!',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
+                      Row(
+                        children: [
+                          Container(
+                            width: 400,
+                            height: 30,
+                            margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Hi, Syaikhul Shafwan R',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment
+                            .start, // Align children to the start (left) of the Row
+                        children: [
+                          //Kotak Ballance
+                          Container(
+                              margin: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                              width: 400,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                        child: Text(
+                                          'Your Ballance',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.normal,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                        child: Text(
+                                          'RP 10.184',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                        width: 20,
+                                        height: 20,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color.fromARGB(255, 251, 51,
+                                              51), // Membuat container menjadi lingkaran // Ganti dengan warna yang Anda inginkan
+                                        ),
+                                        child: Image.network(
+                                          'https://cdn-icons-png.flaticon.com/512/109/109617.png',
+                                          width:
+                                              1, // Set the width of the image
+                                          height: 1,
+                                          color: Colors
+                                              .white, // Set the height of the image
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          //kotak Bonus Ballance
+                          Container(
+                              margin: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                              width: 400,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                        child: Text(
+                                          'Bonus Ballance',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.normal,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                        child: Text(
+                                          '0',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                        width: 20,
+                                        height: 20,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color.fromARGB(255, 251, 51,
+                                              51), // Membuat container menjadi lingkaran // Ganti dengan warna yang Anda inginkan
+                                        ),
+                                        child: Image.network(
+                                          'https://cdn-icons-png.flaticon.com/512/109/109617.png',
+                                          width:
+                                              1, // Set the width of the image
+                                          height: 1,
+                                          color: Colors
+                                              .white, // Set the height of the image
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                        ],
                       )
                     ],
                   ),
